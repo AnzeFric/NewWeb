@@ -1,6 +1,7 @@
 import Image from "next/image";
 import main_background from "@/assets/main_background.jpg";
 import styles from "./style.module.css";
+import { SlArrowDown } from "react-icons/sl";
 
 export default function BannerSection() {
   return (
@@ -15,6 +16,10 @@ export default function BannerSection() {
         <h2 className={styles.headerSecondaryText}>
           The web to change the world
         </h2>
+      </div>
+      <div className={styles.arrowContainer}>
+        <p className={styles.arrowText}>Learn more</p>
+        <SlArrowDown size={40} color={"#fff"} />
       </div>
     </div>
   );
