@@ -11,11 +11,22 @@ export default function BannerSection() {
         className={styles.image}
         alt="Entry background image"
       />
+      <div className={styles.header}>
+        <div className={styles.headerItems}>
+          <p className={styles.eventsText}>EVENTS</p>
+          <p className={styles.hireText}>HIRE</p>
+          <p className={styles.contactText}>CONTACT</p>
+        </div>
+        <h1 className={styles.nameText}>ANŽE FRIC</h1>
+        <div className={styles.headerItems}>
+          <p className={styles.historyText}>HISTORY</p>
+          <p className={styles.teamText}>TEAM</p>
+          <p className={styles.otherText}>OTHER</p>
+        </div>
+      </div>
       <div className={styles.banner}>
-        <h1 className={styles.bannerText}>THE NEW WEB</h1>
-        <h2 className={styles.bannerSecondaryText}>
-          The web to change the world
-        </h2>
+        <h2 className={styles.bannerText}>THE NEW WEB</h2>
+        <h3 className={styles.bannerSecondaryText}>web to change the world</h3>
       </div>
       <div className={styles.arrowContainer}>
         <p className={styles.arrowText}>Learn more</p>
