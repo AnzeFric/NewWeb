@@ -13,23 +13,25 @@ export default function BannerSection() {
       />
       <div className={styles.header}>
         <div className={styles.headerItems}>
-          <p className={styles.eventsText}>EVENTS</p>
-          <p className={styles.hireText}>HIRE</p>
-          <p className={styles.contactText}>CONTACT</p>
+          <p className={`${styles.eventsText} navText`}>EVENTS</p>
+          <p className={`${styles.hireText} navText`}>HIRE</p>
+          <p className={`${styles.contactText} navText`}>CONTACT</p>
         </div>
-        <h1 className={styles.nameText}>ANŽE FRIC</h1>
+        <h1 className={`${styles.nameText} titleText`}>ANZE FRIC</h1>
         <div className={styles.headerItems}>
-          <p className={styles.historyText}>HISTORY</p>
-          <p className={styles.teamText}>TEAM</p>
-          <p className={styles.otherText}>OTHER</p>
+          <p className={`${styles.historyText} navText`}>HISTORY</p>
+          <p className={`${styles.teamText} navText`}>TEAM</p>
+          <p className={`${styles.otherText} navText`}>OTHER</p>
         </div>
       </div>
       <div className={styles.banner}>
-        <h2 className={styles.bannerText}>THE NEW WEB</h2>
-        <h3 className={styles.bannerSecondaryText}>web to change the world</h3>
+        <h2 className={`${styles.bannerText} titleText`}>THE NEW WEB</h2>
+        <h3 className={`${styles.bannerSecondaryText} titleText`}>
+          web to change the world
+        </h3>
       </div>
       <div className={styles.arrowContainer}>
-        <p className={styles.arrowText}>Learn more</p>
+        <p className={`${styles.arrowText} primaryText`}>Learn more</p>
         <SlArrowDown size={40} color={"#fff"} />
       </div>
     </div>

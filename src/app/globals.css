@@ -1,3 +1,20 @@
+.titleText {
+  font-family: var(--font-aquire);
+  font-weight: 700;
+  letter-spacing: 1;
+}
+
+.navText {
+  font-family: var(--font-aquire);
+  font-weight: 400;
+  letter-spacing: 2;
+}
+
+.primaryText {
+  font-family: var(--font-aquire);
+  font-weight: 400;
+  letter-spacing: 1;
+}
 
 body {
     margin: 0
