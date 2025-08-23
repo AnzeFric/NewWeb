@@ -11,9 +11,9 @@ export default function BannerSection() {
         className={styles.image}
         alt="Entry background image"
       />
-      <div className={styles.header}>
-        <h1 className={styles.headerText}>THE NEW WEB</h1>
-        <h2 className={styles.headerSecondaryText}>
+      <div className={styles.banner}>
+        <h1 className={styles.bannerText}>THE NEW WEB</h1>
+        <h2 className={styles.bannerSecondaryText}>
           The web to change the world
         </h2>
       </div>
