@@ -1,0 +1,160 @@
+.container {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.header {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 15px;
+  width: 100%;
+}
+
+.headerItems {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.headerItems p {
+  font-size: 20px;
+  color: white;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.headerItems p::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -8;
+  left: 0;
+  background-color: #fff;
+  transition: transform 0.15s ease-out;
+}
+
+.headerItems p:hover::after {
+  transform: scaleX(1);
+}
+
+.nameText {
+  font-size: 60px;
+  color: white;
+  font-weight: bold;
+  margin: 0;
+}
+
+.eventsText {
+  animation: moveUp 1s ease forwards, fadeIn 1s ease forwards;
+}
+
+.hireText {
+  animation: moveUp 1s ease forwards, fadeIn 1s ease forwards;
+  animation-delay: 0.2s;
+}
+
+.contactText {
+  animation: moveUp 1s ease forwards, fadeIn 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+.historyText {
+  animation: moveUp 1s ease forwards, fadeIn 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.teamText {
+  animation: moveUp 1s ease forwards, fadeIn 1s ease forwards;
+  animation-delay: 0.8s;
+}
+
+.otherText {
+  animation: moveUp 1s ease forwards, fadeIn 1s ease forwards;
+  animation-delay: 1s;
+}
+
+.banner {
+    top: 30%;
+    width: 99%;
+    position: absolute;
+    background-color: rgba(59, 88, 80, 0.9);  
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    animation: 1.5s fadeIn;
+    opacity: 0.95;
+}
+
+.bannerText {
+    color: #fff;
+    font-size: 100px;
+    margin: 0;
+    opacity: 0; /* Start hidden */
+    animation: moveUp 1s ease forwards, fadeIn 1s ease forwards;
+    animation-delay: 1.5s, 1.5s;
+}
+
+.bannerSecondaryText {
+    margin: 0;
+    color: #fff;
+    font-size: 40px;
+    opacity: 0; /* Start hidden */
+    animation: moveUp 1s ease forwards, fadeIn 1s ease forwards;
+    animation-delay: 2s, 2s;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    opacity: 0.95;
+}
+
+.arrowContainer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: rgba(59, 88, 80, 0.9);
+    padding: 15px;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 3.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+.arrowText {
+    color: #fff;
+    font-size: 25px;
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.95;
+    }
+}
+
+@keyframes moveUp {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
+}

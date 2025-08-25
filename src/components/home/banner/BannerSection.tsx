@@ -1,39 +1,46 @@
+"use client";
+
 import Image from "next/image";
 import main_background from "@/assets/main_background.jpg";
 import styles from "./style.module.css";
-import { SlArrowDown } from "react-icons/sl";
+import { useRef, useState } from "react";
+import { DeviceType } from "@/interfaces/device";
+import MobileSection from "./devices/MobileSection";
+import DesktopSection from "./devices/DesktopSection";
 
-export default function BannerSection() {
+interface Props {
+  deviceType: DeviceType;
+}
+
+export default function BannerSection({ deviceType }: Readonly<Props>) {
+  const menuRef = useRef<HTMLDivElement>(null);
+  const [menuOpened, setMenuOpened] = useState(false);
+
+  const toggleMenu = () => {
+    const menu = menuRef.current;
+    if (!menu) return;
+
+    setMenuOpened((prev) => !prev);
+    document.body.style.overflow = menuOpened ? "unset" : "hidden";
+  };
+
   return (
-    <div>
+    <div className={styles.container}>
       <Image
         src={main_background}
         className={styles.image}
         alt="Entry background image"
+        fill
       />
-      <div className={styles.header}>
-        <div className={styles.headerItems}>
-          <p className={`${styles.eventsText} navText`}>EVENTS</p>
-          <p className={`${styles.hireText} navText`}>HIRE</p>
-          <p className={`${styles.contactText} navText`}>CONTACT</p>
-        </div>
-        <h1 className={`${styles.nameText} titleText`}>ANZE FRIC</h1>
-        <div className={styles.headerItems}>
-          <p className={`${styles.historyText} navText`}>HISTORY</p>
-          <p className={`${styles.teamText} navText`}>TEAM</p>
-          <p className={`${styles.otherText} navText`}>OTHER</p>
-        </div>
-      </div>
-      <div className={styles.banner}>
-        <h2 className={`${styles.bannerText} titleText`}>THE NEW WEB</h2>
-        <h3 className={`${styles.bannerSecondaryText} titleText`}>
-          web to change the world
-        </h3>
-      </div>
-      <div className={styles.arrowContainer}>
-        <p className={`${styles.arrowText} primaryText`}>Learn more</p>
-        <SlArrowDown size={40} color={"#fff"} />
-      </div>
+      {(deviceType === "mobile" || deviceType === "tablet") && (
+        <MobileSection
+          menuRef={menuRef}
+          toggleMenu={toggleMenu}
+          menuOpened={menuOpened}
+        />
+      )}
+
+      {deviceType == "desktop" && <DesktopSection />}
     </div>
   );
 }
