@@ -39,7 +39,7 @@ export default function MobileSection({
       </div>
       <div className={styles.arrowContainer}>
         <p className={`${styles.arrowText} primaryText`}>Learn more</p>
-        <SlArrowDown size={40} color={"#fff"} />
+        <SlArrowDown size={"1.5rem"} color={"#fff"} />
       </div>
     </div>
   );
