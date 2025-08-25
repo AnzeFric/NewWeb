@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import main_background from "@/assets/main_background.jpg";
+import main_background from "@/assets/main_background.webp";
 import styles from "./style.module.css";
 import { useRef, useState } from "react";
 import { DeviceType } from "@/interfaces/device";
