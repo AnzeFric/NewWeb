@@ -1,28 +1,75 @@
 "use client";
 
-import BannerSection from "@/components/home/banner/BannerSection";
-import TeamSection from "@/components/home/team/TeamSection";
-import { useEffect, useState } from "react";
-import { DeviceType } from "@/interfaces/device";
+import { useEffect, useState, useRef, useCallback } from "react";
+import NavSection from "@/components/global/nav/NavSection";
+import BannerSection from "@/components/home/BannerSection";
+import styles from "@/styles/app/styles.module.css";
+import ReferenceSection from "@/components/home/ReferenceSection";
+import { useWindowSize } from "@/contexts/WindowSizeContext";
 
 export default function Home() {
-  const [deviceType, setDeviceType] = useState<DeviceType>("desktop");
+  const { height } = useWindowSize();
 
-  const handleResize = () => {
-    const width = window.innerWidth;
-    if (width < 720) setDeviceType("mobile");
-    else if (width < 1280) setDeviceType("tablet");
-    else setDeviceType("desktop");
+  const [menuOpened, setMenuOpened] = useState(false);
+
+  const menuRef = useRef<HTMLDivElement>(null);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const pageNum = useRef(0);
+
+  const TOTAL_PAGES = 3; // Number of sections
+
+  const toggleMenu = () => {
+    if (!menuRef.current) return;
+    setMenuOpened((prev) => !prev);
+    document.body.style.overflow = menuOpened ? "unset" : "hidden";
   };
+
+  const scrollDown = () => {
+    if (!scrollContainerRef.current) return;
+    if (pageNum.current >= TOTAL_PAGES - 1) return;
+
+    pageNum.current += 1;
+    scrollContainerRef.current.style.transform = `translate3d(0px, -${
+      height * pageNum.current
+    }px, 0px)`;
+  };
+
+  const scrollUp = () => {
+    if (!scrollContainerRef.current) return;
+    if (pageNum.current <= 0) return;
+
+    pageNum.current -= 1;
+    scrollContainerRef.current.style.transform = `translate3d(0px, -${
+      height * pageNum.current
+    }px, 0px)`;
+  };
+
+  const scroll = useCallback(
+    (e: WheelEvent) => {
+      e.preventDefault(); // Without it scrolls past the start of section
+      e.deltaY > 0 ? scrollDown() : scrollUp();
+    },
+    [scrollDown, scrollUp]
+  );
+
   useEffect(() => {
-    handleResize();
-    window.addEventListener("resize", handleResize);
-  }, []);
+    document.addEventListener("wheel", scroll, { passive: false });
+
+    return () => {
+      document.removeEventListener("wheel", scroll);
+    };
+  }, [scroll]);
 
   return (
-    <div>
-      <BannerSection deviceType={deviceType} />
-      <TeamSection />
+    <div ref={scrollContainerRef} className={styles.container}>
+      <NavSection
+        menuRef={menuRef}
+        toggleMenu={toggleMenu}
+        menuOpened={menuOpened}
+      />
+      <BannerSection scrollDown={scrollDown} />
+      <ReferenceSection />
+      <ReferenceSection />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
-import "./globals.css";
+import { WindowSizeProvider } from "@/contexts/WindowSizeContext";
+import "@/styles/app/globals.css";
 
 const aquireFont = localFont({
   src: [
@@ -28,7 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={aquireFont.variable}>
-      <body>{children}</body>
+      <body>
+        <WindowSizeProvider>{children}</WindowSizeProvider>
+      </body>
     </html>
   );
 }

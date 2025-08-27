@@ -1,0 +1,120 @@
+/* Global */
+.container {
+    position: relative;
+    max-width: 100vw;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+    background-size: cover;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: auto;
+    object-fit: cover;
+}
+
+/* BannerSection */
+.banner {
+    top: 20%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(59, 88, 80, 0.9);  
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    animation: 1.5s fadeIn;
+    opacity: 0.95;
+}
+
+.bannerText {
+    color: #fff;
+    font-size: 5rem;
+    margin: 0;
+    opacity: 0; /* Start hidden */
+    animation: moveUp 1s ease forwards, fadeIn 1s ease forwards;
+    animation-delay: 1.5s, 1.5s;
+    text-align: center;
+}
+
+.bannerSecondaryText {
+    margin: 0;
+    color: #fff;
+    font-size: 2rem;
+    opacity: 0; /* Start hidden */
+    animation: moveUp 1s ease forwards, fadeIn 1s ease forwards;
+    animation-delay: 2s, 2s;
+    text-align: center;
+    padding: 0.5rem;
+}
+
+@media (min-width: 1280px) {
+    .banner {
+        top: 30%;
+        width: 100%;
+        height: 250px;
+        gap: 1rem;
+    }
+
+    .bannerText {
+        font-size: 6rem;
+    }
+
+    .bannerSecondaryText {
+        font-size: 2.5rem;
+    }
+}
+
+.arrowContainer {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: rgba(59, 88, 80, 0.9);
+    padding: 0.7rem;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 3.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.arrowText {
+    color: #fff;
+    font-size: 1rem;
+    margin: 0;
+}
+
+@media (min-width: 1280px) {
+    .arrowText {
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0.95;
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}

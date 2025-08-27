@@ -1,0 +1,4 @@
+.container {
+    transition: transform 800ms ease;
+    will-change: transform;
+}
