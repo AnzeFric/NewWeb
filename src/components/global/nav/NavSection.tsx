@@ -53,17 +53,17 @@ export default function NavSection() {
               <a href="/" className={`${styles.homeText} navText`}>
                 HOME
               </a>
-              <a href="/hire" className={`${styles.hireText} navText`}>
-                HIRE
-              </a>
-              <a href="/contact" className={`${styles.contactText} navText`}>
-                CONTACT
-              </a>
               <a href="/history" className={`${styles.historyText} navText`}>
                 HISTORY
               </a>
               <a href="/team" className={`${styles.teamText} navText`}>
                 TEAM
+              </a>
+              <a href="/hire" className={`${styles.hireText} navText`}>
+                HIRE
+              </a>
+              <a href="/contact" className={`${styles.contactText} navText`}>
+                CONTACT
               </a>
               <a href="/other" className={`${styles.otherText} navText`}>
                 OTHER
@@ -80,20 +80,20 @@ export default function NavSection() {
               <a href="/" className={`${styles.homeText} navText`}>
                 HOME
               </a>
-              <a href="/hire" className={`${styles.hireText} navText`}>
-                HIRE
-              </a>
-              <a href="/contact" className={`${styles.contactText} navText`}>
-                CONTACT
-              </a>
-            </div>
-            <h1 className={`${styles.nameText} titleText`}>ANZE FRIC</h1>
-            <div className={styles.headerItems}>
               <a href="/history" className={`${styles.historyText} navText`}>
                 HISTORY
               </a>
               <a href="/team" className={`${styles.teamText} navText`}>
                 TEAM
+              </a>
+            </div>
+            <h1 className={`${styles.nameText} titleText`}>ANZE FRIC</h1>
+            <div className={styles.headerItems}>
+              <a href="/hire" className={`${styles.hireText} navText`}>
+                HIRE
+              </a>
+              <a href="/contact" className={`${styles.contactText} navText`}>
+                CONTACT
               </a>
               <a href="/other" className={`${styles.otherText} navText`}>
                 OTHER
