@@ -24,7 +24,7 @@ export default function BannerSection({ scrollDown }: Readonly<Props>) {
           web to change the world
         </h3>
       </div>
-      <button className={styles.arrowContainer} onClick={() => scrollDown()}>
+      <button className={styles.arrowContainer} onClick={scrollDown}>
         <p className={`${styles.arrowText} primaryText`}>Learn more</p>
         <SlArrowDown size={"1.5rem"} color={"#fff"} />
       </button>

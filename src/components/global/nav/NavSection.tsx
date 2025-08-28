@@ -1,19 +1,40 @@
 import { useWindowSize } from "@/contexts/WindowSizeContext";
 import styles from "@/styles/components/global/nav-styles.module.css";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 
-interface Props {
-  menuRef?: React.RefObject<HTMLDivElement | null>;
-  toggleMenu?: () => void;
-  menuOpened?: boolean;
-}
-
-export default function NavSection({
-  menuRef,
-  toggleMenu,
-  menuOpened,
-}: Readonly<Props>) {
+export default function NavSection() {
   const { deviceType } = useWindowSize();
+
+  const [menuOpened, setMenuOpened] = useState(false);
+
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  const preventTouchScroll = useCallback((e: TouchEvent) => {
+    e.preventDefault();
+  }, []);
+
+  const toggleMenu = () => {
+    if (!menuRef.current) return;
+    setMenuOpened((prev) => !prev);
+  };
+
+  useEffect(() => {
+    if (menuOpened) {
+      document.body.style.overflowY = "hidden";
+      document.addEventListener("touchmove", preventTouchScroll, {
+        passive: false,
+      });
+    } else {
+      document.body.style.overflowY = "unset";
+      document.removeEventListener("touchmove", preventTouchScroll);
+    }
+
+    return () => {
+      document.body.style.overflowY = "unset";
+      document.removeEventListener("touchmove", preventTouchScroll);
+    };
+  }, [menuOpened]);
 
   return (
     <div className={styles.container}>

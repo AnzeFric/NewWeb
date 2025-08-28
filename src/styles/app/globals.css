@@ -18,7 +18,8 @@
 
 body {
     margin: 0;
-    overflow: hidden;
+    overflow-y: unset;
+    overflow-x: hidden;
 }
 
 @media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }

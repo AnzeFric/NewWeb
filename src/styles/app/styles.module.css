@@ -1,4 +1,9 @@
 .container {
     transition: transform 800ms ease;
     will-change: transform;
+    width: 100vw;
+}
+
+.mobileContainer {
+    transform: none;
 }
