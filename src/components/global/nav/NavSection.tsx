@@ -2,6 +2,7 @@ import { useWindowSize } from "@/contexts/WindowSizeContext";
 import styles from "@/constants/styles/components/global/nav-styles.module.css";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
+import Link from "next/link";
 
 export default function NavSection() {
   const { deviceType } = useWindowSize();
@@ -34,7 +35,7 @@ export default function NavSection() {
       document.body.style.overflowY = "unset";
       document.removeEventListener("touchmove", preventTouchScroll);
     };
-  }, [menuOpened]);
+  }, [menuOpened, preventTouchScroll]);
 
   return (
     <div className={styles.container}>
@@ -50,24 +51,24 @@ export default function NavSection() {
             }`}
           >
             <div className={styles.headerItems}>
-              <a href="/" className={`${styles.homeText} navText`}>
+              <Link href="/" className={`${styles.homeText} navText`}>
                 HOME
-              </a>
-              <a href="/history" className={`${styles.historyText} navText`}>
+              </Link>
+              <Link href="/history" className={`${styles.historyText} navText`}>
                 HISTORY
-              </a>
-              <a href="/team" className={`${styles.teamText} navText`}>
+              </Link>
+              <Link href="/team" className={`${styles.teamText} navText`}>
                 TEAM
-              </a>
-              <a href="/hire" className={`${styles.hireText} navText`}>
+              </Link>
+              <Link href="/hire" className={`${styles.hireText} navText`}>
                 HIRE
-              </a>
-              <a href="/contact" className={`${styles.contactText} navText`}>
+              </Link>
+              <Link href="/contact" className={`${styles.contactText} navText`}>
                 CONTACT
-              </a>
-              <a href="/other" className={`${styles.otherText} navText`}>
+              </Link>
+              <Link href="/other" className={`${styles.otherText} navText`}>
                 OTHER
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -77,27 +78,27 @@ export default function NavSection() {
         <div>
           <div className={styles.header}>
             <div className={styles.headerItems}>
-              <a href="/" className={`${styles.homeText} navText`}>
+              <Link href="/" className={`${styles.homeText} navText`}>
                 HOME
-              </a>
-              <a href="/history" className={`${styles.historyText} navText`}>
+              </Link>
+              <Link href="/history" className={`${styles.historyText} navText`}>
                 HISTORY
-              </a>
-              <a href="/team" className={`${styles.teamText} navText`}>
+              </Link>
+              <Link href="/team" className={`${styles.teamText} navText`}>
                 TEAM
-              </a>
+              </Link>
             </div>
             <h1 className={`${styles.nameText} titleText`}>ANZE FRIC</h1>
             <div className={styles.headerItems}>
-              <a href="/hire" className={`${styles.hireText} navText`}>
+              <Link href="/hire" className={`${styles.hireText} navText`}>
                 HIRE
-              </a>
-              <a href="/contact" className={`${styles.contactText} navText`}>
+              </Link>
+              <Link href="/contact" className={`${styles.contactText} navText`}>
                 CONTACT
-              </a>
-              <a href="/other" className={`${styles.otherText} navText`}>
+              </Link>
+              <Link href="/other" className={`${styles.otherText} navText`}>
                 OTHER
-              </a>
+              </Link>
             </div>
           </div>
         </div>

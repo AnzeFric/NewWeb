@@ -11,7 +11,7 @@ export default function Home() {
 
   return (
     <ContainerWrapper sections={2}>
-      {({ scrollUp, scrollDown }) => (
+      {({ scrollDown }) => (
         <>
           <BannerSection
             scrollDown={() => scrollDown(deviceType !== "desktop")}
