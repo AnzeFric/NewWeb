@@ -9,12 +9,13 @@ export default function Home() {
   const { deviceType } = useWindowSize();
 
   return (
-    <ContainerWrapper sections={3}>
+    <ContainerWrapper sections={4}>
       {({ scrollUp, scrollDown }) => (
         <>
           <BannerSection
             scrollDown={() => scrollDown(deviceType !== "desktop")}
           />
+          <ReferenceSection />
           <ReferenceSection />
           <ReferenceSection />
         </>

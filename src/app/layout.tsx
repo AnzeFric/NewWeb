@@ -1,20 +1,20 @@
 import localFont from "next/font/local";
 import { WindowSizeProvider } from "@/contexts/WindowSizeContext";
-import "@/styles/app/globals.css";
+import "@/constants/styles/app/globals.css";
 
 const aquireFont = localFont({
   src: [
     {
-      path: "../assets/fonts/aquire-font/AquireLight.otf",
+      path: "../constants/assets/fonts/aquire-font/AquireLight.otf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../assets/fonts/aquire-font/Aquire.otf",
+      path: "../constants/assets/fonts/aquire-font/Aquire.otf",
       weight: "400",
     },
     {
-      path: "../assets/fonts/aquire-font/AquireBold.otf",
+      path: "../constants/assets/fonts/aquire-font/AquireBold.otf",
       weight: "700",
     },
   ],

@@ -1,4 +1,4 @@
-import styles from "@/styles/components/global/container-styles.module.css";
+import styles from "@/constants/styles/components/global/container-styles.module.css";
 import { useWindowSize } from "@/contexts/WindowSizeContext";
 import { useCallback, useEffect, useRef } from "react";
 import NavSection from "@/components/global/nav/NavSection";
@@ -75,11 +75,12 @@ export default function ContainerWrapper({
       }
     >
       <NavSection />
-
-      {children({
-        scrollUp,
-        scrollDown,
-      })}
+      <div className={styles.contentContainer}>
+        {children({
+          scrollUp,
+          scrollDown,
+        })}
+      </div>
     </div>
   );
 }

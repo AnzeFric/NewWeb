@@ -7,7 +7,7 @@ import {
   useEffect,
   ReactNode,
 } from "react";
-import { DeviceType } from "@/interfaces/device";
+import { DeviceType } from "@/constants/interfaces/device";
 
 type WindowContextType = {
   width: number;

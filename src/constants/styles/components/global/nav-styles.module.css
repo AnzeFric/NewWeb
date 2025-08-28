@@ -35,16 +35,17 @@
     margin-top: 80px;
 }
 
-.headerItems p {
+.headerItems a {
     position: relative;
     color: #fff;
     font-size: 2rem;
     text-align: center;
     cursor: pointer;
     margin: 0;
+    text-decoration: none;
 }
 
-.headerItems p::after {
+.headerItems a::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -56,7 +57,7 @@
     transition: transform 0.3s ease-out;
 }
 
-.headerItems p:hover::after {
+.headerItems a:hover::after {
     transform: scaleX(1);
 }
 
@@ -78,7 +79,7 @@
         margin-top: 0;
     }
 
-    .headerItems p {
+    .headerItems a {
         font-size: 1.3rem;
         opacity: 0;
     }

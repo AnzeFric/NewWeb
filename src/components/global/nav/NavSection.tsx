@@ -1,5 +1,5 @@
 import { useWindowSize } from "@/contexts/WindowSizeContext";
-import styles from "@/styles/components/global/nav-styles.module.css";
+import styles from "@/constants/styles/components/global/nav-styles.module.css";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { BiMenuAltRight } from "react-icons/bi";
 
@@ -50,12 +50,24 @@ export default function NavSection() {
             }`}
           >
             <div className={styles.headerItems}>
-              <p className={`${styles.homeText} navText`}>HOME</p>
-              <p className={`${styles.hireText} navText`}>HIRE</p>
-              <p className={`${styles.contactText} navText`}>CONTACT</p>
-              <p className={`${styles.historyText} navText`}>HISTORY</p>
-              <p className={`${styles.teamText} navText`}>TEAM</p>
-              <p className={`${styles.otherText} navText`}>OTHER</p>
+              <a href="/" className={`${styles.homeText} navText`}>
+                HOME
+              </a>
+              <a href="/hire" className={`${styles.hireText} navText`}>
+                HIRE
+              </a>
+              <a href="/contact" className={`${styles.contactText} navText`}>
+                CONTACT
+              </a>
+              <a href="/history" className={`${styles.historyText} navText`}>
+                HISTORY
+              </a>
+              <a href="/team" className={`${styles.teamText} navText`}>
+                TEAM
+              </a>
+              <a href="/other" className={`${styles.otherText} navText`}>
+                OTHER
+              </a>
             </div>
           </div>
         </div>
@@ -65,15 +77,27 @@ export default function NavSection() {
         <div>
           <div className={styles.header}>
             <div className={styles.headerItems}>
-              <p className={`${styles.homeText} navText`}>HOME</p>
-              <p className={`${styles.hireText} navText`}>HIRE</p>
-              <p className={`${styles.contactText} navText`}>CONTACT</p>
+              <a href="/" className={`${styles.homeText} navText`}>
+                HOME
+              </a>
+              <a href="/hire" className={`${styles.hireText} navText`}>
+                HIRE
+              </a>
+              <a href="/contact" className={`${styles.contactText} navText`}>
+                CONTACT
+              </a>
             </div>
             <h1 className={`${styles.nameText} titleText`}>ANZE FRIC</h1>
             <div className={styles.headerItems}>
-              <p className={`${styles.historyText} navText`}>HISTORY</p>
-              <p className={`${styles.teamText} navText`}>TEAM</p>
-              <p className={`${styles.otherText} navText`}>OTHER</p>
+              <a href="/history" className={`${styles.historyText} navText`}>
+                HISTORY
+              </a>
+              <a href="/team" className={`${styles.teamText} navText`}>
+                TEAM
+              </a>
+              <a href="/other" className={`${styles.otherText} navText`}>
+                OTHER
+              </a>
             </div>
           </div>
         </div>

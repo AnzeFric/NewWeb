@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import main_background from "@/assets/main_background.webp";
-import styles from "@/styles/components/home/banner-styles.module.css";
+import main_background from "@/constants/assets/main_background.webp";
+import styles from "@/constants/styles/components/home/banner-styles.module.css";
 import { SlArrowDown } from "react-icons/sl";
 
 interface Props {
@@ -11,7 +11,7 @@ interface Props {
 
 export default function BannerSection({ scrollDown }: Readonly<Props>) {
   return (
-    <div className={styles.container}>
+    <div>
       <Image
         src={main_background}
         className={styles.image}
