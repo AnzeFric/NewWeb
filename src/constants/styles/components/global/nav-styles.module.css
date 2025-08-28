@@ -88,22 +88,22 @@
         animation: moveUp 1s ease forwards, fadeIn 1s ease forwards;
     }
     
-    .hireText {
+    .historyText {
         animation: moveUp 1s ease forwards, fadeIn 1s ease forwards;
         animation-delay: 0.2s;
     }
     
-    .contactText {
+    .teamText {
         animation: moveUp 1s ease forwards, fadeIn 1s ease forwards;
         animation-delay: 0.4s;
     }
-    
-    .historyText {
+
+    .hireText {
         animation: moveUp 1s ease forwards, fadeIn 1s ease forwards;
         animation-delay: 0.6s;
     }
     
-    .teamText {
+    .contactText {
         animation: moveUp 1s ease forwards, fadeIn 1s ease forwards;
         animation-delay: 0.8s;
     }
