@@ -1,3 +1,110 @@
-.text {
-    color: white;
+.educationContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.contentContainer {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+.bachelorSchool,
+.secondarySchool {
+  background: #0e2a2f;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 255, 204, 0.05);
+  padding: 24px 28px;
+  width: 30%;
+  color: #d6f5ee;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transform: translateX(0);
+  height: fit-content;
+  opacity: 0;
+}
+
+/* Animate them on page load */
+.bachelorSchool {
+    top: 20%;
+    text-align: end;
+}
+
+.secondarySchool {
+    top: 60%;
+}
+
+.primarySchool {
+  padding: 16px 30px;
+  border-radius: 10px;
+  background: #10363c;
+  width: 20%;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  align-self: center;
+}
+
+/* Titles and text styles */
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #e0fffa;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #aee2d8;
+}
+
+.school {
+  font-size: 16px;
+  margin-bottom: 6px;
+  font-style: italic;
+  color: #8ac5bd;
+}
+
+.year {
+  font-size: 14px;
+  color: #6baaa2;
+}
+
+.line {
+    border: 1px solid #6baaa2;
+    background-color: #6baaa2;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animateLeft {
+  animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.animateRight {
+  animation: slideInFromRight 1s ease-out forwards;
 }
