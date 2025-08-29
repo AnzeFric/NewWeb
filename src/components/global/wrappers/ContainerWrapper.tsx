@@ -20,6 +20,13 @@ export default function ContainerWrapper({
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const pageNum = useRef(0);
 
+  // Function to disable middle mouse button scrolling
+  const handleMouseDown = useCallback((e: MouseEvent) => {
+    if (e.button === 1) {
+      e.preventDefault();
+    }
+  }, []);
+
   const scrollDown = useCallback(
     (isMobile: boolean) => {
       if (!scrollContainerRef.current) return;
@@ -63,9 +70,11 @@ export default function ContainerWrapper({
   useEffect(() => {
     if (deviceType === "desktop") {
       document.addEventListener("wheel", scroll, { passive: false });
+      window.addEventListener("mousedown", handleMouseDown);
 
       return () => {
         document.removeEventListener("wheel", scroll);
+        window.removeEventListener("mousedown", handleMouseDown);
       };
     }
   }, [deviceType, scroll]);
