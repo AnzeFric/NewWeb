@@ -20,24 +20,27 @@ export default function ContainerWrapper({
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const pageNum = useRef(0);
 
-  const scrollDown = (isMobile: boolean) => {
-    if (!scrollContainerRef.current) return;
-    if (pageNum.current >= sections - 1) return;
+  const scrollDown = useCallback(
+    (isMobile: boolean) => {
+      if (!scrollContainerRef.current) return;
+      if (pageNum.current >= sections - 1) return;
 
-    if (isMobile) {
-      window.scrollBy({
-        top: height - window.scrollY,
-        behavior: "smooth",
-      });
-    } else {
-      pageNum.current += 1;
-      scrollContainerRef.current.style.transform = `translate3d(0px, -${
-        height * pageNum.current
-      }px, 0px)`;
-    }
-  };
+      if (isMobile) {
+        window.scrollBy({
+          top: height - window.scrollY,
+          behavior: "smooth",
+        });
+      } else {
+        pageNum.current += 1;
+        scrollContainerRef.current.style.transform = `translate3d(0px, -${
+          height * pageNum.current
+        }px, 0px)`;
+      }
+    },
+    [height, sections]
+  );
 
-  const scrollUp = () => {
+  const scrollUp = useCallback(() => {
     if (!scrollContainerRef.current) return;
     if (pageNum.current <= 0) return;
 
@@ -45,7 +48,7 @@ export default function ContainerWrapper({
     scrollContainerRef.current.style.transform = `translate3d(0px, -${
       height * pageNum.current
     }px, 0px)`;
-  };
+  }, [height]);
 
   const scroll = useCallback(
     (e: WheelEvent) => {
