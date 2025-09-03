@@ -60,17 +60,17 @@ export default function NavSection() {
               >
                 RUTART
               </a>
-              <Link href="/team" className={`${styles.teamText} navText`}>
-                TEAM
+              <Link href="/" className={`${styles.teamText} navText`}>
+                EMPTY
               </Link>
-              <Link href="/hire" className={`${styles.hireText} navText`}>
-                HIRE
+              <Link href="/" className={`${styles.hireText} navText`}>
+                EMPTY
               </Link>
-              <Link href="/contact" className={`${styles.contactText} navText`}>
-                CONTACT
+              <Link href="/" className={`${styles.contactText} navText`}>
+                EMPTY
               </Link>
-              <Link href="/other" className={`${styles.otherText} navText`}>
-                OTHER
+              <Link href="/" className={`${styles.otherText} navText`}>
+                EMPTY
               </Link>
             </div>
           </div>
@@ -90,20 +90,20 @@ export default function NavSection() {
               >
                 RUTART
               </a>
-              <Link href="/team" className={`${styles.teamText} navText`}>
-                TEAM
+              <Link href="/" className={`${styles.teamText} navText`}>
+                EMPTY
               </Link>
             </div>
             <h1 className={`${styles.nameText} titleText`}>ANZE FRIC</h1>
             <div className={styles.headerItems}>
-              <Link href="/hire" className={`${styles.hireText} navText`}>
-                HIRE
+              <Link href="/" className={`${styles.hireText} navText`}>
+                EMPTY
               </Link>
-              <Link href="/contact" className={`${styles.contactText} navText`}>
-                CONTACT
+              <Link href="/" className={`${styles.contactText} navText`}>
+                EMPTY
               </Link>
-              <Link href="/other" className={`${styles.otherText} navText`}>
-                OTHER
+              <Link href="/" className={`${styles.otherText} navText`}>
+                EMPTY
               </Link>
             </div>
           </div>
