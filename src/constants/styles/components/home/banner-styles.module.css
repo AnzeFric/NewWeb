@@ -44,20 +44,20 @@
     padding: 0.5rem;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
     .banner {
         top: 30%;
         width: 100%;
-        height: 250px;
+        height: 220px;
         gap: 1rem;
     }
 
     .bannerText {
-        font-size: 6rem;
+        font-size: 5.5rem;
     }
 
     .bannerSecondaryText {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
 }
 
@@ -85,9 +85,9 @@
     margin: 0;
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
     .arrowText {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 
