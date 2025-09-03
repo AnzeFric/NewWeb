@@ -14,8 +14,8 @@
   background: #0e2a2f;
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 255, 204, 0.05);
-  padding: 24px 28px;
-  width: 30%;
+  padding: 1rem 1rem 1rem 1rem;
+  width: 20%;
   color: #d6f5ee;
   color: white;
   position: relative;
@@ -27,12 +27,12 @@
 
 /* Animate them on page load */
 .bachelorSchool {
-    top: 20%;
+    top: 10%;
     text-align: end;
 }
 
 .secondarySchool {
-    top: 60%;
+    top: 40%;
 }
 
 .primarySchool {
@@ -42,17 +42,23 @@
   width: 20%;
   text-align: center;
   color: white;
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 600;
   align-self: center;
 }
 
 /* Titles and text styles */
 .title {
-  font-size: 22px;
+  font-size: 1rem;
   font-weight: 700;
   margin-bottom: 8px;
   color: #e0fffa;
+}
+
+@media (min-width:641px)  { 
+  .title {
+    font-size: 2rem;
+  }
 }
 
 .subtitle {
