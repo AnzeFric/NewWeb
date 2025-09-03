@@ -36,6 +36,11 @@ export default function Home() {
     }
   }, []);
 
+  // Scrolls to top after page reload
+  useEffect(() => {
+    window.history.scrollRestoration = "manual";
+  }, []);
+
   return (
     <ContainerWrapper sections={2}>
       {({ scrollDown }) => (
