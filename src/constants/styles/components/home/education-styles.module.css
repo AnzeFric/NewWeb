@@ -15,7 +15,7 @@
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 255, 204, 0.05);
   padding: 1rem 1rem 1rem 1rem;
-  width: 20%;
+  width: 30%;
   color: #d6f5ee;
   color: white;
   position: relative;
@@ -55,7 +55,12 @@
   color: #e0fffa;
 }
 
-@media (min-width:641px)  { 
+@media (min-width:961px)  {
+  .bachelorSchool,
+  .secondarySchool {
+    width: 10%;
+  }
+
   .title {
     font-size: 2rem;
   }
