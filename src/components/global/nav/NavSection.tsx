@@ -54,9 +54,12 @@ export default function NavSection() {
               <Link href="/" className={`${styles.homeText} navText`}>
                 HOME
               </Link>
-              <Link href="/history" className={`${styles.historyText} navText`}>
-                HISTORY
-              </Link>
+              <a
+                href="https://rutart.si/"
+                className={`${styles.historyText} navText`}
+              >
+                RUTART
+              </a>
               <Link href="/team" className={`${styles.teamText} navText`}>
                 TEAM
               </Link>
@@ -81,9 +84,12 @@ export default function NavSection() {
               <Link href="/" className={`${styles.homeText} navText`}>
                 HOME
               </Link>
-              <Link href="/history" className={`${styles.historyText} navText`}>
-                HISTORY
-              </Link>
+              <a
+                href="https://rutart.si/"
+                className={`${styles.historyText} navText`}
+              >
+                RUTART
+              </a>
               <Link href="/team" className={`${styles.teamText} navText`}>
                 TEAM
               </Link>
