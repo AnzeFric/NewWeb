@@ -61,7 +61,7 @@
     transform: scaleX(1);
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
     .header {    
         align-items: center;
         margin-right: 3rem;
@@ -71,7 +71,7 @@
     }
 
     .nameText {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     .headerItems {
@@ -80,7 +80,7 @@
     }
 
     .headerItems a {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
         opacity: 0;
     }
 
