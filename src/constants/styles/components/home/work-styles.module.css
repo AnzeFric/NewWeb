@@ -1,16 +1,44 @@
 .workContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .sectionTitle {
-    position: absolute;
     writing-mode: vertical-lr;
     text-orientation: upright;
     letter-spacing: 0.5rem;
     color: white;
-    margin: 0;
+    margin: 1rem;
     font-size: 2rem;
-    top: 1rem;
-    left: 1rem;
+    z-index: 2; 
+    position: relative;
+}
+
+.contentContainer {
+    background-color: #10363c;
+    width: 100%;
+}
+
+
+.animateRight {
+    animation: slideInFromRight 0.9s ease-out;
+}
+
+.offscreenRight {
+  transform: translateX(100%);
+}
+
+@media (max-width: 768px) {
+    .sectionTitle {
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
 }
