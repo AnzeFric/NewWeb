@@ -6,6 +6,7 @@ import ContainerWrapper from "@/components/global/wrappers/ContainerWrapper";
 import { useWindowSize } from "@/contexts/WindowSizeContext";
 import { useEffect, useState } from "react";
 import eduStyles from "@/constants/styles/components/home/education-styles.module.css";
+import WorkSection from "@/components/home/WorkSection";
 
 // Sections: Education, Work history, Projects, Hobbies
 export default function Home() {
@@ -42,13 +43,14 @@ export default function Home() {
   }, []);
 
   return (
-    <ContainerWrapper sections={2}>
+    <ContainerWrapper sections={3}>
       {({ scrollDown }) => (
         <>
           <BannerSection
             scrollDown={() => scrollDown(deviceType !== "desktop")}
           />
           <EducationSection focused={educationFocused} />
+          <WorkSection />
         </>
       )}
     </ContainerWrapper>

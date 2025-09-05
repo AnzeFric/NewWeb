@@ -1,0 +1,16 @@
+.workContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionTitle {
+    position: absolute;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: 0.5rem;
+    color: white;
+    margin: 0;
+    font-size: 2rem;
+    top: 1rem;
+    left: 1rem;
+}
