@@ -12,7 +12,7 @@ export default function CV() {
 
   return (
     <ContainerWrapper sections={1}>
-      {({ scrollDown }) => (
+      {() => (
         <div className={styles.container}>
           <h2 className={`${styles.title} titleText`}>CV LIST</h2>
           <div className={styles.listContainer}>

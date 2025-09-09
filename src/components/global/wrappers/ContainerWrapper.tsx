@@ -77,7 +77,7 @@ export default function ContainerWrapper({
         window.removeEventListener("mousedown", handleMouseDown);
       };
     }
-  }, [deviceType, scroll]);
+  }, [deviceType, scroll, handleMouseDown]);
 
   return (
     <div
