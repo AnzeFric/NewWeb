@@ -17,8 +17,64 @@
 .contentContainer {
     background-color: #10363c;
     width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
 }
 
+.swiperContainer {
+    width: 90%;
+    height: 60%;
+}
+
+.swiperContainer :global(.swiper-slide) {
+    display: flex;
+    align-items: center;
+}
+
+.itemContainer {
+    background-color: #06171d;
+    width: 100%;
+    height: fit-content;
+    padding: 20px 10px 20px 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.company {
+    color: white;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.5rem;
+    margin: 0;
+}
+
+.position {
+    color: white;
+    margin: 20px 0 10px 0;
+}
+
+.year {
+    color: white;
+    margin: 0;
+}
+
+.taskTitle {
+    color: white;
+    margin: 20px 0 15px 0;
+}
+
+.tableItem {
+    color: white;
+}
+
+.tableContainer {
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
 
 .animateRight {
     animation: slideInFromRight 0.9s ease-out;
@@ -31,6 +87,18 @@
 @media (max-width: 768px) {
     .sectionTitle {
         font-size: 1.5rem;
+    }
+    
+    .navigationContainer {
+        top: 5px;
+        right: 10px;
+        gap: 5px;
+    }
+    
+    .navButton {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
     }
 }
 
