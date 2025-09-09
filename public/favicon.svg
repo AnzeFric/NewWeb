@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Dark green background -->
+  <rect width="32" height="32" fill="#1a4d3a" rx="6"/>
+  
+  <!-- Futuristic hexagonal core -->
+  <polygon points="16,6 22,10 22,18 16,22 10,18 10,10" 
+           fill="none" 
+           stroke="#00ff88" 
+           stroke-width="1.5" 
+           opacity="0.8"/>
+  
+  <!-- Inner glowing circle -->
+  <circle cx="16" cy="14" r="4" 
+          fill="#00ff88" 
+          opacity="0.3"/>
+  
+  <!-- Central bright dot -->
+  <circle cx="16" cy="14" r="2" 
+          fill="#ffffff" 
+          opacity="0.9"/>
+  
+  <!-- Digital corner accents -->
+  <rect x="8" y="8" width="3" height="1" fill="#00ff88" opacity="0.6"/>
+  <rect x="8" y="8" width="1" height="3" fill="#00ff88" opacity="0.6"/>
+  
+  <rect x="21" y="8" width="3" height="1" fill="#00ff88" opacity="0.6"/>
+  <rect x="23" y="8" width="1" height="3" fill="#00ff88" opacity="0.6"/>
+  
+  <rect x="8" y="19" width="3" height="1" fill="#00ff88" opacity="0.6"/>
+  <rect x="8" y="17" width="1" height="3" fill="#00ff88" opacity="0.6"/>
+  
+  <rect x="21" y="19" width="3" height="1" fill="#00ff88" opacity="0.6"/>
+  <rect x="23" y="17" width="1" height="3" fill="#00ff88" opacity="0.6"/>
+  
+  <!-- Subtle scan line effect -->
+  <line x1="4" y1="14" x2="28" y2="14" 
+        stroke="#00ff88" 
+        stroke-width="0.5" 
+        opacity="0.4"/>
+</svg>
