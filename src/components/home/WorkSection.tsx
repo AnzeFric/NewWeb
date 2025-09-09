@@ -2,8 +2,7 @@ import styles from "@/constants/styles/components/home/work-styles.module.css";
 import { useWindowSize } from "@/contexts/WindowSizeContext";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
-import { Autoplay, Navigation } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 
 interface Props {
   focused: boolean;
@@ -25,17 +24,13 @@ export default function WorkSection({ focused }: Readonly<Props>) {
         <Swiper
           className={styles.swiperContainer}
           direction={direction}
-          slidesPerView={1}
-          spaceBetween={0}
+          slidesPerView={deviceType === "desktop" ? 2 : 1}
+          spaceBetween={deviceType === "desktop" ? 50 : 0}
           pagination={false}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
           speed={800}
-          modules={[Autoplay, Navigation]}
+          modules={[Autoplay]}
           loop={true}
-          navigation={{
-            prevEl: `.${styles.navPrev}`,
-            nextEl: `.${styles.navNext}`,
-          }}
         >
           <SwiperSlide>
             <div className={styles.itemContainer}>

@@ -89,17 +89,12 @@
     .sectionTitle {
         font-size: 1.5rem;
     }
-    
-    .navigationContainer {
-        top: 5px;
-        right: 10px;
-        gap: 5px;
-    }
-    
-    .navButton {
-        width: 35px;
-        height: 35px;
-        font-size: 18px;
+}
+
+@media (min-width: 1280px) {
+    .swiperContainer {
+        width: 60%;
+        height: 70%;
     }
 }
 
