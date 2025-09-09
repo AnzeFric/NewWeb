@@ -16,6 +16,7 @@ export default function BannerSection({ scrollDown }: Readonly<Props>) {
         src={main_background}
         className={styles.image}
         alt="Entry background image"
+        priority
         fill
       />
       <div className={styles.banner}>
