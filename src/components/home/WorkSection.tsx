@@ -45,13 +45,18 @@ export default function WorkSection({ focused }: Readonly<Props>) {
               <p className={`${styles.position} primaryText`}>
                 JavaScript Developer
               </p>
-              <p className={`${styles.year} primaryText`}>8.2025 - 8.2025</p>
-              <p className={`${styles.taskTitle} primaryText`}>Tasks:</p>
+              <p className={`${styles.year} primaryText`}>1.2023 - 5.2024</p>
+              <p className={`${styles.taskTitle} primaryText`}>Work:</p>
               <ul className={styles.tableContainer}>
-                <li className={`${styles.tableItem} primaryText`}>Hello</li>
-                <li className={`${styles.tableItem} primaryText`}>Hello</li>
-                <li className={`${styles.tableItem} primaryText`}>Hello</li>
-                <li className={`${styles.tableItem} primaryText`}>Hello</li>
+                <li className={`${styles.tableItem} primaryText`}>
+                  Made projections with geojson data of Slovenian buildings
+                </li>
+                <li className={`${styles.tableItem} primaryText`}>
+                  Leafet.js: Floor plans, cross sections,...
+                </li>
+                <li className={`${styles.tableItem} primaryText`}>
+                  Three.js: 3D interactive
+                </li>
               </ul>
             </div>
           </SwiperSlide>
@@ -63,13 +68,22 @@ export default function WorkSection({ focused }: Readonly<Props>) {
               <p className={`${styles.position} primaryText`}>
                 Full Stack Developer
               </p>
-              <p className={`${styles.year} primaryText`}>8.2025 - 8.2025</p>
-              <p className={`${styles.taskTitle} primaryText`}>Tasks:</p>
+              <p className={`${styles.year} primaryText`}>8.2024 - 5.2025</p>
+              <p className={`${styles.taskTitle} primaryText`}>Work:</p>
               <ul className={styles.tableContainer}>
-                <li className={`${styles.tableItem} primaryText`}>Hello</li>
-                <li className={`${styles.tableItem} primaryText`}>Hello</li>
-                <li className={`${styles.tableItem} primaryText`}>Hello</li>
-                <li className={`${styles.tableItem} primaryText`}>Hello</li>
+                <li className={`${styles.tableItem} primaryText`}>
+                  React Native: MP3 and MP4 UI, statistics, data display...
+                </li>
+                <li className={`${styles.tableItem} primaryText`}>
+                  React: Invoice generator
+                </li>
+                <li className={`${styles.tableItem} primaryText`}>
+                  Java Spring Boot, Maven
+                </li>
+                <li className={`${styles.tableItem} primaryText`}>
+                  MongoDB and PostgreSQL
+                </li>
+                <li className={`${styles.tableItem} primaryText`}>Docker</li>
               </ul>
             </div>
           </SwiperSlide>
@@ -79,13 +93,19 @@ export default function WorkSection({ focused }: Readonly<Props>) {
               <p className={`${styles.position} primaryText`}>
                 Software Developer
               </p>
-              <p className={`${styles.year} primaryText`}>8.2025 - 8.2025</p>
-              <p className={`${styles.taskTitle} primaryText`}>Tasks:</p>
+              <p className={`${styles.year} primaryText`}>8.2025 - 9.2025</p>
+              <p className={`${styles.taskTitle} primaryText`}>Work:</p>
               <ul className={styles.tableContainer}>
-                <li className={`${styles.tableItem} primaryText`}>Hello</li>
-                <li className={`${styles.tableItem} primaryText`}>Hello</li>
-                <li className={`${styles.tableItem} primaryText`}>Hello</li>
-                <li className={`${styles.tableItem} primaryText`}>Hello</li>
+                <li className={`${styles.tableItem} primaryText`}>
+                  Document migration into Jaspersoft
+                </li>
+                <li className={`${styles.tableItem} primaryText`}>
+                  SQL and PL/SQL
+                </li>
+                <li className={`${styles.tableItem} primaryText`}>Oracle DB</li>
+                <li className={`${styles.tableItem} primaryText`}>
+                  Oracle APEX
+                </li>
               </ul>
             </div>
           </SwiperSlide>
