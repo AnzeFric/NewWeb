@@ -1,7 +1,7 @@
 "use client";
 
 import ContainerWrapper from "@/components/global/wrappers/ContainerWrapper";
-import styles from "@/constants/styles/components/cv/list-styles.module.css";
+import styles from "@/constants/styles/app/cv/cv-styles.module.css";
 import useCvStore from "@/stores/cvStore";
 import { useRouter } from "next/navigation";
 
