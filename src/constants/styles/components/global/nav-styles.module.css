@@ -61,7 +61,7 @@
     transform: scaleX(1);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1280px) {
     .header {    
         align-items: center;
         margin-right: 3rem;

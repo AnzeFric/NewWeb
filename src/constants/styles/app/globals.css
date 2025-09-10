@@ -20,6 +20,7 @@ body {
     margin: 0;
     overflow-y: unset;
     overflow-x: hidden;
+    background-color: #06171d;
 }
 
 html {
