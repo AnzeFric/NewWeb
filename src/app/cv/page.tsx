@@ -3,9 +3,15 @@
 import ContainerWrapper from "@/components/global/wrappers/ContainerWrapper";
 import styles from "@/constants/styles/components/cv/list-styles.module.css";
 import useCvStore from "@/stores/cvStore";
+import { useRouter } from "next/navigation";
 
 export default function CV() {
   const { cvList } = useCvStore();
+  const router = useRouter();
+
+  const redirectToAddCv = () => {
+    router.push("/cv/add");
+  };
 
   return (
     <ContainerWrapper sections={1}>
@@ -17,10 +23,13 @@ export default function CV() {
               {cvList.map((cv, index) => (
                 <div className={styles.itemContainer} key={index + cv.uuid} />
               ))}
-              {cvList.length < 9 && (
-                <div className={styles.addContainer}>
+              {cvList.length < 8 && (
+                <button
+                  className={styles.addContainer}
+                  onClick={redirectToAddCv}
+                >
                   <p className={`${styles.addText} titleText`}>Add new +</p>
-                </div>
+                </button>
               )}
             </div>
           </div>
