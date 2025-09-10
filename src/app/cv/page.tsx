@@ -2,22 +2,10 @@
 
 import ContainerWrapper from "@/components/global/wrappers/ContainerWrapper";
 import styles from "@/constants/styles/components/cv/list-styles.module.css";
-import { useState } from "react";
-import { CVData } from "@/constants/interfaces/cv";
-
-// MAX 9 CVS
+import useCvStore from "@/stores/cvStore";
 
 export default function CV() {
-  const [cvList, setCvList] = useState<Array<CVData>>([
-    { name: "", uuid: "", date: new Date() },
-    { name: "", uuid: "", date: new Date() },
-    { name: "", uuid: "", date: new Date() },
-    { name: "", uuid: "", date: new Date() },
-    { name: "", uuid: "", date: new Date() },
-    { name: "", uuid: "", date: new Date() },
-    { name: "", uuid: "", date: new Date() },
-    { name: "", uuid: "", date: new Date() },
-  ]); // To zustand store
+  const { cvList } = useCvStore();
 
   return (
     <ContainerWrapper sections={1}>
