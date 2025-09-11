@@ -87,6 +87,37 @@
     color: #6baaa2;
 }
 
+@media (max-width: 480px) {
+    .bachelorSchool,
+    .secondarySchool {
+        width: 85%;
+        padding: 0.6rem;
+    }
+    
+    .primarySchool {
+        padding: 8px 16px;
+    }
+    
+    .title {
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+    }
+    
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+    
+    .school {
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+    
+    .year {
+        font-size: 10px;
+    }
+}
+
 @media (max-width: 768px) {
     .bachelorSchool,
     .secondarySchool {
@@ -116,41 +147,6 @@
     
     .year {
         font-size: 12px;
-    }
-}
-
-@media (max-width: 480px) {
-    .bachelorSchool,
-    .secondarySchool {
-        width: 85%;
-        padding: 0.6rem;
-    }
-    
-    .primarySchool {
-        padding: 8px 16px;
-    }
-    
-    .sectionTitle {
-        font-size: 1.2rem;
-    }
-    
-    .title {
-        font-size: 0.8rem;
-        margin-bottom: 4px;
-    }
-    
-    .subtitle {
-        font-size: 14px;
-        margin-bottom: 4px;
-    }
-    
-    .school {
-        font-size: 12px;
-        margin-bottom: 4px;
-    }
-    
-    .year {
-        font-size: 10px;
     }
 }
 
