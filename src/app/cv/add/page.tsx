@@ -71,11 +71,11 @@ export default function AddCV() {
 
           <div className={styles.addCvButtonContainer}>
             {sectionNum > 0 && (
-              <button onClick={prevSection}>
+              <button className={styles.cvSectionButton} onClick={prevSection}>
                 <p>Back</p>
               </button>
             )}
-            <button onClick={nextSection}>
+            <button className={styles.cvSectionButton} onClick={nextSection}>
               <p>Next</p>
             </button>
           </div>
