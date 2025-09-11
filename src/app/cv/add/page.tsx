@@ -7,7 +7,7 @@ import { useState } from "react";
 
 export default function AddCV() {
   const [sectionNum, setSectionNum] = useState(0);
-  const MAX_SECTIONS = 5; // Number of sections in content container
+  const MAX_SECTIONS = 6; // Number of sections in content container
 
   const nextSection = () => {
     if (sectionNum >= MAX_SECTIONS - 1) return;
@@ -63,11 +63,17 @@ export default function AddCV() {
             >
               <p className={`${styles.addCvNavTabText} primaryText`}>Hobbies</p>
             </button>
+            <button
+              className={styles.addCvNavTab}
+              onClick={() => toggleSection(5)}
+            >
+              <p className={`${styles.addCvNavTabText} primaryText`}>
+                Finish & Preview
+              </p>
+            </button>
           </div>
 
-          <div className={styles.addCvContentContainer}>
-            {sectionNum === 0 && <SummarySection />}
-          </div>
+          <div>{sectionNum === 0 && <SummarySection />}</div>
 
           <div className={styles.addCvButtonContainer}>
             {sectionNum > 0 && (
