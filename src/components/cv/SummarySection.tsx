@@ -13,7 +13,7 @@ export default function SummarySection() {
     linkedin: "",
   });
 
-  const handleInputChange = (e: any) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -21,7 +21,7 @@ export default function SummarySection() {
     }));
   };
 
-  const handleSave = (e: any) => {};
+  const handleSave = () => {};
 
   return (
     <div className={styles.cvSummaryContainer}>
