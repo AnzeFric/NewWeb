@@ -208,6 +208,25 @@
     }
 }
 
+@media screen and (orientation: landscape) {
+   .sectionTitle {
+        font-size: 1.5rem; 
+    }
+
+    .bachelorSchool,
+    .secondarySchool {
+        width: 35%;
+    }
+
+    .bachelorSchool {
+        top: 10%;
+    }
+
+    .secondarySchool {
+        top: 40%;
+    }
+}
+
 @keyframes slideInFromLeft {
     0% {
         transform: translateX(-100px);
