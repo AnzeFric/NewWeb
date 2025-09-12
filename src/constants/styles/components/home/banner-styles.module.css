@@ -1,4 +1,3 @@
-/* Global */
 .image {
     position: absolute;
     top: 0;
@@ -7,7 +6,6 @@
     object-fit: cover;
 }
 
-/* BannerSection */
 .banner {
     top: 20%;
     width: 100%;
@@ -44,23 +42,6 @@
     padding: 0.5rem;
 }
 
-@media (min-width: 1200px) {
-    .banner {
-        top: 30%;
-        width: 100%;
-        height: 220px;
-        gap: 1rem;
-    }
-
-    .bannerText {
-        font-size: 5.5rem;
-    }
-
-    .bannerSecondaryText {
-        font-size: 2.3rem;
-    }
-}
-
 .arrowContainer {
     position: absolute;
     bottom: 0;
@@ -86,8 +67,39 @@
 }
 
 @media (min-width: 1200px) {
+    .banner {
+        top: 30%;
+        width: 100%;
+        height: 220px;
+        gap: 1rem;
+    }
+
+    .bannerText {
+        font-size: 5.5rem;
+    }
+
+    .bannerSecondaryText {
+        font-size: 2.3rem;
+    }
+
     .arrowText {
         font-size: 1.2rem;
+    }
+}
+
+@media screen and (orientation: landscape) {
+   .banner {
+        top: 25%;
+        height: 150px;
+    }
+
+    .bannerText {
+        font-size: 3rem;
+    }
+
+    .bannerSecondaryText {
+        font-size: 1.8rem;
+        line-height: 0;
     }
 }
 
