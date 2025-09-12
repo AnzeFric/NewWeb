@@ -66,8 +66,8 @@ export default function NavSection() {
               <Link href="/" className={`${styles.hireText} navText`}>
                 EMPTY
               </Link>
-              <Link href="/" className={`${styles.contactText} navText`}>
-                EMPTY
+              <Link href="/earth" className={`${styles.contactText} navText`}>
+                EARTH
               </Link>
               <Link href="/cv" className={`${styles.otherText} navText`}>
                 MAKE CV
@@ -99,8 +99,8 @@ export default function NavSection() {
               <Link href="/" className={`${styles.hireText} navText`}>
                 EMPTY
               </Link>
-              <Link href="/" className={`${styles.contactText} navText`}>
-                EMPTY
+              <Link href="/earth" className={`${styles.contactText} navText`}>
+                EARTH
               </Link>
               <Link href="/cv" className={`${styles.otherText} navText`}>
                 MAKE CV

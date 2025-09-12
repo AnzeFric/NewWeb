@@ -98,7 +98,7 @@
     }
 }
 
-@media screen and (orientation: landscape) {
+@media screen and (orientation: landscape) and (max-width: 1024px) {
     .swiperContainer {
         height: 80%;
     }
