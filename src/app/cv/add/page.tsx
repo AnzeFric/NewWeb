@@ -30,13 +30,17 @@ export default function AddCV() {
 
           <div className={styles.addCvNav}>
             <button
-              className={styles.addCvNavTab}
+              className={`${sectionNum === 0 && styles.activeAddCvNavTab} ${
+                styles.addCvNavTab
+              }`}
               onClick={() => toggleSection(0)}
             >
               <p className={`${styles.addCvNavTabText} primaryText`}>Summary</p>
             </button>
             <button
-              className={styles.addCvNavTab}
+              className={`${sectionNum === 1 && styles.activeAddCvNavTab} ${
+                styles.addCvNavTab
+              }`}
               onClick={() => toggleSection(1)}
             >
               <p className={`${styles.addCvNavTabText} primaryText`}>
@@ -44,7 +48,9 @@ export default function AddCV() {
               </p>
             </button>
             <button
-              className={styles.addCvNavTab}
+              className={`${sectionNum === 2 && styles.activeAddCvNavTab} ${
+                styles.addCvNavTab
+              }`}
               onClick={() => toggleSection(2)}
             >
               <p className={`${styles.addCvNavTabText} primaryText`}>
@@ -52,19 +58,25 @@ export default function AddCV() {
               </p>
             </button>
             <button
-              className={styles.addCvNavTab}
+              className={`${sectionNum === 3 && styles.activeAddCvNavTab} ${
+                styles.addCvNavTab
+              }`}
               onClick={() => toggleSection(3)}
             >
               <p className={`${styles.addCvNavTabText} primaryText`}>Skills</p>
             </button>
             <button
-              className={styles.addCvNavTab}
+              className={`${sectionNum === 4 && styles.activeAddCvNavTab} ${
+                styles.addCvNavTab
+              }`}
               onClick={() => toggleSection(4)}
             >
               <p className={`${styles.addCvNavTabText} primaryText`}>Hobbies</p>
             </button>
             <button
-              className={styles.addCvNavTab}
+              className={`${sectionNum === 5 && styles.activeAddCvNavTab} ${
+                styles.addCvNavTab
+              }`}
               onClick={() => toggleSection(5)}
             >
               <p className={`${styles.addCvNavTabText} primaryText`}>
