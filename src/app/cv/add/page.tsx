@@ -4,6 +4,11 @@ import ContainerWrapper from "@/components/global/wrappers/ContainerWrapper";
 import styles from "@/constants/styles/app/cv/add-styles.module.css";
 import SummarySection from "@/components/cv/SummarySection";
 import { useState } from "react";
+import EducationSection from "@/components/cv/EducationSection";
+import WorkSection from "@/components/cv/WorkSection";
+import PreviewSection from "@/components/cv/PreviewSection";
+import SkillsSection from "@/components/cv/SkillsSection";
+import HobbiesSection from "@/components/cv/HobbiesSection";
 
 export default function AddCV() {
   const [sectionNum, setSectionNum] = useState(0);
@@ -86,6 +91,11 @@ export default function AddCV() {
           </div>
 
           <div>{sectionNum === 0 && <SummarySection />}</div>
+          <div>{sectionNum === 1 && <EducationSection />}</div>
+          <div>{sectionNum === 2 && <WorkSection />}</div>
+          <div>{sectionNum === 3 && <SkillsSection />}</div>
+          <div>{sectionNum === 4 && <HobbiesSection />}</div>
+          <div>{sectionNum === 5 && <PreviewSection />}</div>
 
           <div className={styles.addCvButtonContainer}>
             {sectionNum > 0 && (
