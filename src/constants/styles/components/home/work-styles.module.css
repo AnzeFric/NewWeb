@@ -98,6 +98,28 @@
     }
 }
 
+@media screen and (orientation: landscape) {
+    .swiperContainer {
+        height: 80%;
+    }
+    
+    .sectionTitle {
+        font-size: 1.5rem; 
+    }
+
+    .company,
+    .position,
+    .year,
+    .taskTitle {
+        font-size: 1rem;
+    }
+
+    .tableItem {
+        font-size: 0.8rem;
+        line-height: 0.9rem;
+    }
+}
+
 @keyframes slideInFromRight {
     0% {
         transform: translateX(100%);
